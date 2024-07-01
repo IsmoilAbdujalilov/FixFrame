@@ -1,0 +1,169 @@
+$site-top-hover-icon: #ff0000;
+$site-top__text-color: #ffffff;
+$site-top__link-color: #181818;
+$site-top__border-color: #d7d7d7;
+$site-top__background-color: #001460;
+
+@mixin flexLayout(
+  $flex: flex,
+  $jc: default,
+  $ai: default,
+  $gap: default,
+  $flexFlow: nowrap row
+) {
+  gap: $gap;
+  display: $flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-flow: $flexFlow;
+}
+
+@mixin headingFonts(
+  $color: $input__border-color,
+  $fontSize: 18px,
+  $fontWeight: 400,
+  $lineHeight: default,
+  $textTransform: capitalize
+) {
+  color: $color;
+  margin: 0 default;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  text-transform: $textTransform;
+}
+
+@mixin fontFamily($font) {
+  font-family: $font;
+}
+
+@mixin transition($duration) {
+  transition: $duration;
+}
+
+.site-top {
+  padding: {
+    top: 15px;
+    bottom: 15px;
+  }
+  background-color: $site-top__background-color;
+
+  &__container {
+    @include flexLayout(flex, space-between, center, none, row nowrap);
+  }
+
+  &__contacts {
+    @include flexLayout(flex, flex-start, center, 60px, row nowrap);
+  }
+
+  &__contact {
+    a {
+      @include flexLayout(flex, flex-start, center, 5px, row nowrap);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        @include transition(fill 0.3s linear);
+      }
+    }
+
+    &-text {
+      @include headingFonts(
+        $site-top__text-color,
+        14px,
+        400,
+        19.07px,
+        capitalize
+      );
+      @include transition(color 0.3s linear);
+      @include fontFamily(("Open Sans", sans-serif));
+    }
+  }
+
+  &__contact:hover {
+    a {
+      span {
+        color: red;
+      }
+    }
+
+    svg {
+      path {
+        fill: $site-top-hover-icon;
+      }
+    }
+  }
+
+  &__medias {
+    @include flexLayout(flex, flex-end, center, 30px, row nowrap);
+  }
+
+  &__media {
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        @include transition(fill 0.3s linear);
+      }
+    }
+  }
+
+  &__media:hover {
+    svg {
+      path {
+        fill: $site-top-hover-icon;
+      }
+    }
+  }
+}
+
+.header {
+  padding: {
+    top: 16px;
+    bottom: 16px;
+  }
+  border-bottom: 1px solid $site-top__border-color;
+
+  &__container {
+    @include flexLayout(flex, space-between, center, none, nowrap row);
+  }
+
+  &-logo {
+    width: 89.28px;
+    height: 46.04px;
+    object-fit: cover;
+  }
+
+  .nav {
+    &__list {
+      @include flexLayout(flex, flex-end, center, 50px, row nowrap);
+    }
+
+    &__item {
+      &-link {
+        @include transition(color 150ms linear);
+        @include fontFamily(("Open Sans", sans-serif));
+
+        @include headingFonts(
+          $site-top__link-color,
+          16px,
+          400,
+          21.79px,
+          capitalize
+        );
+
+        &:hover {
+          color: $site-top-hover-icon;
+        }
+
+        &--active {
+          color: $site-top-hover-icon;
+        }
+      }
+    }
+  }
+}

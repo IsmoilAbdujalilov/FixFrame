@@ -1,6 +1,6 @@
 import App from "./App.tsx";
 import { store } from "store";
-import "assets/sass/index.scss";
+import "./assets/sass/index.scss";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
