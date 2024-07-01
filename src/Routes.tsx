@@ -5,7 +5,6 @@ import { createBrowserRouter } from "react-router-dom";
 const News = lazy(() => import("pages/News"));
 const Home = lazy(() => import("pages/Home"));
 const Error = lazy(() => import("pages/Error"));
-const About = lazy(() => import("pages/About"));
 const Contact = lazy(() => import("pages/Contact"));
 const Services = lazy(() => import("pages/Services"));
 const Portfolio = lazy(() => import("pages/Portfolio"));
@@ -18,10 +17,6 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        element: <About />,
-        path: "/pages/about",
       },
       {
         element: <Services />,

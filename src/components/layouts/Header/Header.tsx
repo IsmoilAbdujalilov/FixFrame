@@ -134,7 +134,8 @@ const Header = () => {
             <ul className="nav__list">
               <li className="nav__item">
                 <NavLink
-                  to="/pages/about"
+                  to="/"
+                  onClick={() => setIsOpenNavbar(false)}
                   className={({ isActive }) =>
                     isActive
                       ? "nav__item-link nav__item-link--active"
@@ -147,6 +148,7 @@ const Header = () => {
               <li className="nav__item">
                 <NavLink
                   to="/pages/services"
+                  onClick={() => setIsOpenNavbar(false)}
                   className={({ isActive }) =>
                     isActive
                       ? "nav__item-link nav__item-link--active"
@@ -159,6 +161,7 @@ const Header = () => {
               <li className="nav__item">
                 <NavLink
                   to="/pages/portfolio"
+                  onClick={() => setIsOpenNavbar(false)}
                   className={({ isActive }) =>
                     isActive
                       ? "nav__item-link nav__item-link--active"
@@ -171,6 +174,7 @@ const Header = () => {
               <li className="nav__item">
                 <NavLink
                   to="/pages/news"
+                  onClick={() => setIsOpenNavbar(false)}
                   className={({ isActive }) =>
                     isActive
                       ? "nav__item-link nav__item-link--active"
@@ -183,6 +187,7 @@ const Header = () => {
               <li className="nav__item">
                 <NavLink
                   to="/pages/contact"
+                  onClick={() => setIsOpenNavbar(false)}
                   className={({ isActive }) =>
                     isActive
                       ? "nav__item-link nav__item-link--active"

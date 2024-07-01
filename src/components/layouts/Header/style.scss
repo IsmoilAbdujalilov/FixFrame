@@ -115,7 +115,7 @@ $site-top__background-color: #001460;
   &__contact:hover {
     a {
       span {
-        color: red;
+        color: $site-top-hover-icon;
       }
     }
 
@@ -151,8 +151,14 @@ $site-top__background-color: #001460;
 }
 
 .header {
+  top: 0;
+  z-index: 1;
+  position: sticky;
+  background-color: $site-top__text-color;
   &__toggle-btn {
+    z-index: 2;
     display: none;
+    position: relative;
     @include Button(
       $site-top__background-color,
       1px solid $site-top__background-color,
@@ -170,7 +176,16 @@ $site-top__background-color: #001460;
     }
 
     &--open {
+      @include Button(
+        $site-top__text-color,
+        1px solid $site-top__text-color,
+        0px,
+        10px,
+        opacity 150ms linear
+      );
+
       span {
+        background-color: $site-top__background-color;
         @include transition(transform 150ms linear);
         &:nth-child(1) {
           transform: translateX(1px) translateY(8.5px) rotate(35deg);
@@ -215,7 +230,7 @@ $site-top__background-color: #001460;
 
   .nav {
     @include defaultMediaQuery(875px) {
-      top: 140px;
+      top: 0px;
       left: -100%;
       width: 100%;
       position: fixed;
