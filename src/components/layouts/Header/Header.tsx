@@ -1,8 +1,12 @@
 import "./style.scss";
+import { useState } from "react";
+import Button from "components/Button";
 import { Link, NavLink } from "react-router-dom";
 import { fixFrameLogo } from "assets/images/svg";
 
 const Header = () => {
+  const [isOpenNavbar, setIsOpenNavbar] = useState<boolean>(false);
+
   return (
     <>
       <section className="site-top">
@@ -126,7 +130,7 @@ const Header = () => {
               className="header-logo"
             />
           </Link>
-          <nav className="nav">
+          <nav className={isOpenNavbar ? "nav nav--open" : "nav"}>
             <ul className="nav__list">
               <li className="nav__item">
                 <NavLink
@@ -190,6 +194,20 @@ const Header = () => {
               </li>
             </ul>
           </nav>
+
+          <Button
+            type="button"
+            className={`${
+              isOpenNavbar
+                ? "header__toggle-btn header__toggle-btn--open"
+                : "header__toggle-btn"
+            }`}
+            onClick={() => setIsOpenNavbar((isActive) => !isActive)}
+          >
+            <span className="header__toggle-btn-rule"></span>
+            <span className="header__toggle-btn-rule"></span>
+            <span className="header__toggle-btn-rule"></span>
+          </Button>
         </header>
       </header>
     </>

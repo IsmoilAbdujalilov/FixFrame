@@ -41,6 +41,27 @@ $site-top__background-color: #001460;
   transition: $duration;
 }
 
+@mixin defaultMediaQuery($query) {
+  @media only screen and (max-width: $query) {
+    @content;
+  }
+}
+
+@mixin Button(
+  $bgColor: default,
+  $border: 1px solid $input__border-color,
+  $borderRadius: 4px,
+  $padding: 10px,
+  $transition: all 300ms ease
+) {
+  outline: none;
+  border: $border;
+  padding: $padding;
+  transition: $transition;
+  background-color: $bgColor;
+  border-radius: $borderRadius;
+}
+
 .site-top {
   padding: {
     top: 15px;
@@ -54,6 +75,10 @@ $site-top__background-color: #001460;
 
   &__contacts {
     @include flexLayout(flex, flex-start, center, 60px, row nowrap);
+
+    @include defaultMediaQuery(875px) {
+      gap: 30px;
+    }
   }
 
   &__contact {
@@ -80,6 +105,10 @@ $site-top__background-color: #001460;
       );
       @include transition(color 0.3s linear);
       @include fontFamily(("Open Sans", sans-serif));
+
+      @include defaultMediaQuery(875px) {
+        display: none;
+      }
     }
   }
 
@@ -122,6 +151,52 @@ $site-top__background-color: #001460;
 }
 
 .header {
+  &__toggle-btn {
+    display: none;
+    @include Button(
+      $site-top__background-color,
+      1px solid $site-top__background-color,
+      0px,
+      10px,
+      opacity 150ms linear
+    );
+
+    @include defaultMediaQuery(875px) {
+      @include flexLayout(flex, center, center, 5px, column nowrap);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &--open {
+      span {
+        @include transition(transform 150ms linear);
+        &:nth-child(1) {
+          transform: translateX(1px) translateY(8.5px) rotate(35deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transform: translateX(-10px);
+        }
+
+        &:nth-child(3) {
+          transform: translateX(-1px) translateY(-7.5px) rotate(-35deg);
+        }
+      }
+    }
+
+    &-rule {
+      height: 3px;
+      width: 30px;
+      border-radius: 10px;
+      display: inline-block;
+      background-color: $site-top__text-color;
+      @include transition(transform 150ms linear);
+    }
+  }
+
   padding: {
     top: 16px;
     bottom: 16px;
@@ -139,8 +214,27 @@ $site-top__background-color: #001460;
   }
 
   .nav {
+    @include defaultMediaQuery(875px) {
+      top: 140px;
+      left: -100%;
+      width: 100%;
+      position: fixed;
+      min-height: 100vh;
+      padding: 100px 0px;
+      @include transition(left 300ms linear);
+      background-color: $site-top__background-color;
+
+      &--open {
+        left: 0;
+      }
+    }
+
     &__list {
       @include flexLayout(flex, flex-end, center, 50px, row nowrap);
+
+      @include defaultMediaQuery(875px) {
+        @include flexLayout(flex, center, center, 50px, column nowrap);
+      }
     }
 
     &__item {
@@ -162,6 +256,10 @@ $site-top__background-color: #001460;
 
         &--active {
           color: $site-top-hover-icon;
+        }
+
+        @include defaultMediaQuery(875px) {
+          color: $site-top__text-color;
         }
       }
     }
