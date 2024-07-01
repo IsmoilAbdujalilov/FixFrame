@@ -78,6 +78,10 @@ $site-top__text-color: #ffffff;
   }
 }
 
+@mixin transition($duration) {
+  transition: $duration;
+}
+
 .home-about {
   padding: 140px 0px;
 
@@ -95,12 +99,24 @@ $site-top__text-color: #ffffff;
 
   &__content {
     &-heading {
+      position: relative;
+      padding-left: 82px;
       margin-bottom: 40px;
       @include fontFamily("Philosopher");
       @include headingFonts($site-top__link-color, 40px, 700, 44.8px, none);
 
       @include defaultMediaQuery(1185px) {
         font-size: 36px;
+      }
+
+      &::before {
+        left: 0;
+        top: 50%;
+        content: "";
+        width: 70px;
+        height: 2px;
+        position: absolute;
+        background-color: $site-top__link-color;
       }
     }
 
@@ -116,6 +132,13 @@ $site-top__text-color: #ffffff;
 
     &-btn {
       letter-spacing: 1px;
+      @include transition((color 150ms linear, background-color 150ms linear));
+
+      &:hover {
+        color: $content__btn-color;
+        background-color: transparent;
+      }
+
       @include Button(
         $content__btn-color,
         1px solid $content__btn-color,
