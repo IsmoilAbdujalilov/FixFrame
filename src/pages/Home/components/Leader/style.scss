@@ -1,0 +1,52 @@
+$site-top__link-color: #181818;
+
+@mixin fontFamily($font) {
+  font-family: $font;
+}
+
+@mixin headingFonts(
+  $color: $input__border-color,
+  $fontSize: 18px,
+  $fontWeight: 400,
+  $lineHeight: default,
+  $textTransform: capitalize
+) {
+  color: $color;
+  margin: 0 default;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  text-transform: $textTransform;
+}
+
+.leader {
+  padding: {
+    top: 150px;
+    bottom: 150px;
+  }
+  &-title {
+    position: relative;
+    padding-left: 110px;
+    margin-bottom: 40px;
+    @include fontFamily("Philosopher");
+    @include headingFonts($site-top__link-color, 40px, 700, 44.8px, none);
+
+    &::before {
+      left: 0;
+      top: 50%;
+      content: "";
+      height: 2px;
+      width: 100px;
+      position: absolute;
+      background-color: $site-top__link-color;
+    }
+  }
+
+  &__item {
+    &-img {
+      width: 100%;
+      height: 88px;
+      object-position: center center;
+    }
+  }
+}

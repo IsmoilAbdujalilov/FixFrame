@@ -1,9 +1,10 @@
-import { About } from "./components";
+import { About, Leader } from "./components";
 
 const Home = () => {
   return (
     <>
       <About />
+      <Leader />
     </>
   );
 };
