@@ -152,7 +152,7 @@ $site-top__background-color: #001460;
 
 .header {
   top: 0;
-  z-index: 1;
+  z-index: 2;
   position: sticky;
   background-color: $site-top__text-color;
   &__toggle-btn {

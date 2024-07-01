@@ -16,6 +16,23 @@ const Leader = () => {
         <h2 className="leader-title">Trusted by Industry Leaders</h2>
         <Swiper
           loop
+          breakpoints={{
+            1000: {
+              slidesPerView: 5,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+
+            400: {
+              slidesPerView: 2,
+            },
+
+            350: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+          }}
           slidesPerView={5}
           spaceBetween={20}
           modules={[Autoplay]}
