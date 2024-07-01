@@ -21,6 +21,7 @@ const About = () => {
         <img
           width={685}
           height={485}
+          loading="lazy"
           src={AboutImage}
           className="home-about-image"
           alt="FixFrame about information"
