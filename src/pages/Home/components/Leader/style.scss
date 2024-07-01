@@ -76,7 +76,7 @@ $site-top__link-color: #181818;
 
   &-title {
     position: relative;
-    padding-left: 110px;
+    padding-left: 130px;
     margin-bottom: 40px;
     @include fontFamily("Philosopher");
     @include headingFonts($site-top__link-color, 40px, 700, 44.8px, none);
@@ -87,7 +87,6 @@ $site-top__link-color: #181818;
     }
 
     @include sm {
-      font-size: 28px;
       padding-left: 0px;
       text-align: center;
     }
@@ -107,7 +106,7 @@ $site-top__link-color: #181818;
 
       @include sm {
         left: 45%;
-        top: 150%;
+        top: 125%;
       }
     }
   }
