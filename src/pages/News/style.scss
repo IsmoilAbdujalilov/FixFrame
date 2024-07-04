@@ -1,0 +1,191 @@
+$btn-bg-color: #ff0000;
+$title-color: #181818;
+$input__border-color: #969696;
+$contact-title-color: #ffffff;
+$media__background-color: #001460;
+
+@mixin headingFonts(
+  $color: $input__border-color,
+  $fontSize: 18px,
+  $fontWeight: 400,
+  $lineHeight: default,
+  $textTransform: capitalize
+) {
+  color: $color;
+  margin: 0 default;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  text-transform: $textTransform;
+}
+
+@mixin fontFamily($font) {
+  font-family: $font;
+}
+
+@mixin Button(
+  $bgColor: default,
+  $border: 1px solid $input__border-color,
+  $borderRadius: 4px,
+  $padding: 10px,
+  $transition: all 300ms ease
+) {
+  outline: none;
+  border: $border;
+  padding: $padding;
+  transition: $transition;
+  background-color: $bgColor;
+  border-radius: $borderRadius;
+}
+
+@mixin flexLayout(
+  $flex: flex,
+  $jc: default,
+  $ai: default,
+  $gap: default,
+  $flexFlow: nowrap row
+) {
+  gap: $gap;
+  display: $flex;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-flow: $flexFlow;
+}
+
+@mixin transition($duration) {
+  transition: $duration;
+}
+
+.news {
+  &__content {
+    margin-bottom: 20px;
+    &-title {
+      margin-bottom: 20px;
+      @include fontFamily("Philosopher");
+      @include headingFonts($title-color, 40px, 700, 44.8px, none);
+    }
+
+    &-text {
+      @include fontFamily("Open Sans");
+      @include headingFonts($input__border-color, 16px, 400, 21.79px, none);
+    }
+  }
+
+  &__cards {
+    padding: 50px 0px;
+  }
+
+  &__card {
+    margin-bottom: 50px;
+    &-horizontal-rule {
+      max-width: 315px;
+      margin-bottom: 30px;
+      background-color: $input__border-color;
+    }
+  }
+
+  &__background {
+    width: 100%;
+    padding: 50px 0px;
+    min-height: 290px;
+
+    &-title {
+      margin-bottom: 10px;
+      @include fontFamily("Philosopher");
+      @include headingFonts($contact-title-color, 80px, 700, 89.6px, none);
+    }
+
+    &-text {
+      @include fontFamily("Open Sans");
+      @include headingFonts($contact-title-color, 28px, 400, 33.13px, none);
+    }
+  }
+
+  &-carousel {
+    height: 100%;
+    position: relative;
+
+    &__list {
+      margin-bottom: 30px;
+    }
+
+    &__item {
+      &-image {
+        height: 520px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &-buttons {
+    right: 0;
+    z-index: 1;
+    bottom: 5px;
+    position: absolute;
+    @include flexLayout(flex, center, center, 0px, row nowrap);
+
+    &__btn {
+      @include flexLayout(flex, center, center, 0px, row nowrap);
+      @include Button(
+        $contact-title-color,
+        1px solid $input__border-color,
+        0px,
+        25px,
+        transform 150ms linear
+      );
+
+      &:active {
+        transform: scale(0.8);
+      }
+
+      &-image {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &-footer {
+    @include flexLayout(flex, space-between, center, none, row nowrap);
+    &-link {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: $media__background-color;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+    }
+
+    &__media {
+      @include transition(opacity 150ms linear);
+      &-image {
+        width: 32px;
+        height: 32px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__medias {
+      @include flexLayout(flex, flex-start, center, 30px, row nowrap);
+    }
+
+    &-btn {
+      @include fontFamily("Open Sans");
+      @include headingFonts($contact-title-color, 16px, 400, 21.79px, none);
+      @include Button(
+        $btn-bg-color,
+        1px solid $btn-bg-color,
+        0px,
+        16px 64px,
+        (color 150ms linear, background-color 150ms linear)
+      );
+
+      &:hover {
+        color: $btn-bg-color;
+        background-color: transparent;
+      }
+    }
+  }
+}

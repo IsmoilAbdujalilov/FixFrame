@@ -1,4 +1,5 @@
 import "./style.scss";
+import { useEffect } from "react";
 import {
   HeroImage1,
   newsHouseImage1,
@@ -8,6 +9,13 @@ import {
 } from "assets/images/jpg";
 
 const NewsView = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const backgroundColor = "rgba(0, 20, 96, 0.700)";
 
   const backgroundStyle = {
@@ -19,7 +27,9 @@ const NewsView = () => {
 
   return (
     <section className="news-view">
-      <h1 className="visually-hidden">FixFrame news</h1>
+      <h1 className="visually-hidden">
+        FixFrame Mold Remediation and Inspection Services
+      </h1>
       <div className="news-view__background" style={backgroundStyle}>
         <div className="container">
           <h2 className="news-view__background-title">
