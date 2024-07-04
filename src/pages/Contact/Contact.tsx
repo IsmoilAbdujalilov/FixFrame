@@ -1,5 +1,7 @@
+import "./style.scss";
+
 const Contact = () => {
-  return <h1>Contact page</h1>;
+  return <div></div>;
 };
 
 export default Contact;
