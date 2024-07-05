@@ -1,3 +1,6 @@
+$sm: 576px;
+$md: 768px;
+
 $btn-bg-color: #ff0000;
 $input__border-color: #969696;
 $contact-title-color: #ffffff;
@@ -37,10 +40,26 @@ $contact-answer-title-color: #181818;
   font-family: $font;
 }
 
+@mixin sm {
+  @media only screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: $md) {
+    @content;
+  }
+}
+
 .contact {
   &__box {
     width: 100%;
     @include flexLayout(flex, flex-start, center, 30px, row nowrap);
+
+    @include sm {
+      gap: 15px;
+    }
   }
 
   &__background {
@@ -49,11 +68,19 @@ $contact-answer-title-color: #181818;
     text-align: center;
     padding: 100px 0px;
 
+    @include sm {
+      padding: 75px 0px;
+    }
+
     &-heading {
       position: relative;
       margin-bottom: 20px;
       @include fontFamily("Philosopher");
       @include headingFonts($contact-title-color, 40px, 700, 44.8px, none);
+
+      @include md {
+        font-size: 36px;
+      }
     }
 
     &-horizontal-rule {
@@ -71,6 +98,10 @@ $contact-answer-title-color: #181818;
     &-text {
       @include fontFamily("Open Sans");
       @include headingFonts($contact-title-color, 24px, 400, 32.68px, none);
+
+      @include md {
+        font-size: 20px;
+      }
     }
   }
 
@@ -87,6 +118,16 @@ $contact-answer-title-color: #181818;
       right: 40px;
       bottom: 100px;
     }
+
+    @include sm {
+      padding: {
+        top: 40px;
+        left: 20px;
+        right: 20px;
+        bottom: 40px;
+      }
+    }
+
     margin: 0 auto;
     max-width: 755px;
     min-height: 500px;
@@ -111,10 +152,19 @@ $contact-answer-title-color: #181818;
         44.8px,
         none
       );
+
+      @include md {
+        font-size: 36px;
+      }
+
+      @include sm {
+        font-size: 30px;
+      }
     }
 
     &-title {
       text-align: center;
+      margin-bottom: 20px;
       @include fontFamily("Philosopher");
       @include headingFonts(
         $contact-answer-title-color,
@@ -123,6 +173,14 @@ $contact-answer-title-color: #181818;
         44.8px,
         none
       );
+
+      @include md {
+        font-size: 36px;
+      }
+
+      @include sm {
+        font-size: 30px;
+      }
     }
   }
 
@@ -133,9 +191,29 @@ $contact-answer-title-color: #181818;
     background-color: $media__background-color;
     @include flexLayout(flex, center, center, none, row nowrap);
 
+    @include md {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include sm {
+      width: 50px;
+      height: 50px;
+    }
+
     svg {
-      width: 52px;
-      height: 52px;
+      width: 54px;
+      height: 54px;
+
+      @include md {
+        width: 30px;
+        height: 30px;
+      }
+
+      @include sm {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -144,6 +222,10 @@ $contact-answer-title-color: #181818;
       margin-bottom: 10px;
       @include fontFamily("Philosopher");
       @include headingFonts($btn-bg-color, 24px, 700, 26.88px, row nowrap);
+
+      @include sm {
+        font-size: 20px;
+      }
     }
 
     &-text {
@@ -155,6 +237,10 @@ $contact-answer-title-color: #181818;
         21.79px,
         none
       );
+
+      @include sm {
+        font-size: 14px;
+      }
     }
   }
 
@@ -169,9 +255,29 @@ $contact-answer-title-color: #181818;
     background-color: $media__background-color;
     @include flexLayout(flex, center, center, 0px, row nowrap);
 
+    @include md {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include sm {
+      width: 50px;
+      height: 50px;
+    }
+
     &-icon {
       width: 32px;
       height: 32px;
+
+      @include md {
+        width: 25px;
+        height: 25px;
+      }
+
+      @include sm {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 }
