@@ -5,11 +5,11 @@ import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import {
-  CarouselIcon1,
-  CarouselIcon2,
   Media1,
   Media2,
   Media3,
+  CarouselIcon1,
+  CarouselIcon2,
 } from "assets/images/svg";
 import {
   HeroImage2,

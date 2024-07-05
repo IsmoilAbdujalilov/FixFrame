@@ -4,6 +4,11 @@ $input__border-color: #969696;
 $contact-title-color: #ffffff;
 $media__background-color: #001460;
 
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xl: 1200px;
+
 @mixin headingFonts(
   $color: $input__border-color,
   $fontSize: 18px,
@@ -56,6 +61,36 @@ $media__background-color: #001460;
   transition: $duration;
 }
 
+@mixin sm {
+  @media only screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin defaultMediaQuery($query) {
+  @media only screen and (max-width: $query) {
+    @content;
+  }
+}
+
 .news {
   &__content {
     margin-bottom: 20px;
@@ -63,11 +98,20 @@ $media__background-color: #001460;
       margin-bottom: 20px;
       @include fontFamily("Philosopher");
       @include headingFonts($title-color, 40px, 700, 44.8px, none);
+
+      @include sm {
+        font-size: 30px;
+        line-height: 35px;
+      }
     }
 
     &-text {
       @include fontFamily("Open Sans");
       @include headingFonts($input__border-color, 16px, 400, 21.79px, none);
+
+      @include sm {
+        font-size: 14px;
+      }
     }
   }
 
@@ -93,11 +137,43 @@ $media__background-color: #001460;
       margin-bottom: 10px;
       @include fontFamily("Philosopher");
       @include headingFonts($contact-title-color, 80px, 700, 89.6px, none);
+
+      @include xl {
+        font-size: 65px;
+        line-height: 70px;
+      }
+
+      @include lg {
+        font-size: 60px;
+      }
+
+      @include md {
+        font-size: 50px;
+        line-height: 55px;
+      }
+
+      @include sm {
+        font-size: 36px;
+        line-height: 50px;
+      }
     }
 
     &-text {
       @include fontFamily("Open Sans");
       @include headingFonts($contact-title-color, 28px, 400, 33.13px, none);
+
+      @include xl {
+        font-size: 20px;
+      }
+
+      @include lg {
+        font-size: 18px;
+      }
+
+      @include sm {
+        font-size: 16px;
+        line-height: 30px;
+      }
     }
   }
 
@@ -113,6 +189,14 @@ $media__background-color: #001460;
       &-image {
         height: 520px;
         object-fit: cover;
+
+        @include md {
+          height: 400px;
+        }
+
+        @include sm {
+          height: 300px;
+        }
       }
     }
   }
@@ -134,6 +218,10 @@ $media__background-color: #001460;
         transform 150ms linear
       );
 
+      @include sm {
+        padding: 20px;
+      }
+
       &:active {
         transform: scale(0.8);
       }
@@ -141,18 +229,33 @@ $media__background-color: #001460;
       &-image {
         width: 32px;
         height: 32px;
+
+        @include sm {
+          height: 25px;
+          width: 25px;
+        }
       }
     }
   }
 
   &-footer {
     @include flexLayout(flex, space-between, center, none, row nowrap);
+
+    @include defaultMediaQuery(480px) {
+      @include flexLayout(flex, space-between, center, 20px, column nowrap);
+    }
+
     &-link {
       width: 64px;
       height: 64px;
       border-radius: 50%;
       background-color: $media__background-color;
       @include flexLayout(flex, center, center, 0, row nowrap);
+
+      @include sm {
+        width: 50px;
+        height: 50px;
+      }
     }
 
     &__media {
@@ -160,6 +263,16 @@ $media__background-color: #001460;
       &-image {
         width: 32px;
         height: 32px;
+
+        @include sm {
+          width: 25px;
+          height: 25px;
+        }
+
+        @include defaultMediaQuery(480px) {
+          width: 22px;
+          height: 22px;
+        }
       }
 
       &:hover {
@@ -169,6 +282,10 @@ $media__background-color: #001460;
 
     &__medias {
       @include flexLayout(flex, flex-start, center, 30px, row nowrap);
+
+      @include defaultMediaQuery(480px) {
+        justify-content: space-between;
+      }
     }
 
     &-btn {
@@ -181,6 +298,14 @@ $media__background-color: #001460;
         16px 64px,
         (color 150ms linear, background-color 150ms linear)
       );
+
+      @include sm {
+        padding: 16px 40px;
+      }
+
+      @include defaultMediaQuery(480px) {
+        width: 100%;
+      }
 
       &:hover {
         color: $btn-bg-color;
