@@ -1,5 +1,5 @@
 import AboutImage from "./about.jpg";
-import { HeroImage1, HeroImage2, HeroImage3 } from "./hero";
+import { HeroImage1, HeroImage2, HeroImage3, HeroImage4 } from "./hero";
 import {
   newsHouseImage1,
   newsHouseImage2,
@@ -28,17 +28,32 @@ import {
   NewsImage4,
   NewsImage5,
 } from "./news";
+import {
+  ServicesImage1,
+  ServicesImage2,
+  ServicesImage3,
+  ServicesImage4,
+  ServicesImage5,
+  ServicesImage6,
+} from "./services";
 
 export {
   AboutImage,
   HeroImage1,
   HeroImage2,
   HeroImage3,
+  HeroImage4,
   NewsImage1,
   NewsImage2,
   NewsImage3,
   NewsImage4,
   NewsImage5,
+  ServicesImage1,
+  ServicesImage2,
+  ServicesImage3,
+  ServicesImage4,
+  ServicesImage5,
+  ServicesImage6,
   newsHouseImage1,
   newsHouseImage2,
   newsHouseImage3,
