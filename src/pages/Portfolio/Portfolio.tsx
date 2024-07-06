@@ -410,6 +410,131 @@ const Portfolio = () => {
             </ul>
           </section>
         </li>
+        <li className="portfolio__container container">
+          <div className="portfolio__item">
+            <Swiper
+              loop
+              autoplay={{
+                delay: 2500,
+              }}
+              navigation={{
+                nextEl: ".portfolio__btn--right",
+                prevEl: ".portfolio__btn--left",
+              }}
+              modules={[Navigation, Autoplay]}
+              className="portfolio__carousels"
+            >
+              <SwiperSlide className="portfolio__carousel">
+                <img
+                  width={610}
+                  height={430}
+                  alt="carousel 1"
+                  src={newsHouseImage1}
+                  className="portfolio__carousel-image"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="portfolio__carousel">
+                <img
+                  width={610}
+                  height={430}
+                  alt="carousel 1"
+                  src={newsHouseImage1}
+                  className="portfolio__carousel-image"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="portfolio__carousel">
+                <img
+                  width={610}
+                  height={430}
+                  alt="carousel 1"
+                  src={newsHouseImage1}
+                  className="portfolio__carousel-image"
+                />
+              </SwiperSlide>
+              <SwiperSlide className="portfolio__carousel">
+                <img
+                  width={610}
+                  height={430}
+                  alt="carousel 1"
+                  src={newsHouseImage1}
+                  className="portfolio__carousel-image"
+                />
+              </SwiperSlide>
+
+              <div className="portfolio__buttons">
+                <Button
+                  type="button"
+                  className="portfolio__btn portfolio__btn--left"
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    alt="carousel-1"
+                    src={CarouselIcon1}
+                    className="portfolio__btn-img"
+                  />
+                </Button>
+                <Button
+                  type="button"
+                  className="portfolio__btn portfolio__btn--right"
+                >
+                  <img
+                    width={32}
+                    height={32}
+                    alt="carousel-2"
+                    src={CarouselIcon2}
+                    className="portfolio__btn-img"
+                  />
+                </Button>
+              </div>
+            </Swiper>
+          </div>
+          <section className="portfolio__content">
+            <hr className="portfolio__content-horizontal-rule" />
+            <h3 className="portfolio__content-title">
+              Landscape and Snow Removal
+            </h3>
+            <p className="portfolio__content-text">
+              We're your comprehensive solution for all outdoor needs, offering
+              services for both residential and commercial properties
+            </p>
+            <ul className="portfolio__medias">
+              <li className="portfolio__media">
+                <a target="_blank" href="#">
+                  <img
+                    width={32}
+                    height={32}
+                    src={ContactMediaIcon1}
+                    alt="FixFrame instagram"
+                    className="portfolio__media-icon"
+                  />
+                </a>
+              </li>
+              <li className="portfolio__media">
+                <a target="_blank" href="#">
+                  <img
+                    width={32}
+                    height={32}
+                    src={ContactMediaIcon2}
+                    alt="FixFrame facebook"
+                    className="portfolio__media-icon"
+                  />
+                </a>
+              </li>
+              <li className="portfolio__media">
+                <a target="_blank" href="#">
+                  <img
+                    width={32}
+                    height={32}
+                    src={ContactMediaIcon3}
+                    alt="FixFrame telephone"
+                    className="portfolio__media-icon"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+        </li>
       </ul>
     </section>
   );

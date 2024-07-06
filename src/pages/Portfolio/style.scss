@@ -109,6 +109,14 @@ $media__background-color: #001460;
     margin-bottom: 80px;
     @include flexLayout(flex, center, center, 30px, row nowrap);
 
+    &:nth-child(even) {
+      @include flexLayout(flex, center, center, 30px, row-reverse nowrap);
+
+      @include defaultMediaQuery(1075px) {
+        display: block;
+      }
+    }
+
     @include defaultMediaQuery(1075px) {
       display: block;
     }
