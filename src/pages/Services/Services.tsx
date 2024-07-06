@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./style.scss";
 import {
+  ContactImage,
   HeroImage4,
   ServicesImage1,
   ServicesImage2,
@@ -9,6 +10,7 @@ import {
   ServicesImage5,
   ServicesImage6,
 } from "assets/images/jpg";
+import { Button, Input } from "components";
 
 const Services = () => {
   const backgroundColor = "rgba(0, 20, 96, 0.700)";
@@ -81,7 +83,11 @@ const Services = () => {
           {servicesData.length > 0 &&
             servicesData.map((el: servicesDataTypes) => {
               return (
-                <li className="services__card" key={el.id}>
+                <Link
+                  key={el.id}
+                  className="services__card"
+                  to={`/pages/services/${el.id}`}
+                >
                   <img
                     width={400}
                     height={350}
@@ -99,7 +105,7 @@ const Services = () => {
                       Read more
                     </Link>
                   </div>
-                </li>
+                </Link>
               );
             })}
         </ul>
@@ -242,6 +248,62 @@ const Services = () => {
             </ul>
           </li>
         </ul>
+      </div>
+
+      <div className="container">
+        <section className="services__contact">
+          <div className="services__box">
+            <h3 className="services__box-title">Any questions?</h3>
+            <p className="services__box-text">
+              Feel free to reach out to us by completing the form below.
+            </p>
+            <hr className="services__box-horizontal-rule" />
+            <form className="services__form">
+              <Input
+                required
+                type="text"
+                placeholder="Your name"
+                className="services__form-field"
+              />
+              <Input
+                required
+                type="email"
+                placeholder="Your Email Address"
+                className="services__form-field"
+              />
+              <Input
+                required
+                type="number"
+                placeholder="Contact phone"
+                className="services__form-field"
+              />
+              <select required className="services__form-field">
+                <option
+                  value="project scope"
+                  className="services__form-select-option"
+                >
+                  Project scope
+                </option>
+              </select>
+              <textarea
+                required
+                className="services__form-texterea"
+                placeholder="Describe your request"
+              ></textarea>
+              <Button type="button" className="services__form-submit">
+                Submit your request
+              </Button>
+            </form>
+          </div>
+          <div className="services__box">
+            <img
+              height={630}
+              alt="contact"
+              src={ContactImage}
+              className="services__contact-image"
+            />
+          </div>
+        </section>
       </div>
     </section>
   );
