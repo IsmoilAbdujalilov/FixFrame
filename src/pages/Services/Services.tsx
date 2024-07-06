@@ -290,7 +290,7 @@ const Services = () => {
                 className="services__form-texterea"
                 placeholder="Describe your request"
               ></textarea>
-              <Button type="button" className="services__form-submit">
+              <Button type="submit" className="services__form-submit">
                 Submit your request
               </Button>
             </form>
