@@ -2,12 +2,14 @@ import "./style.scss";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
+  ContactImage,
   HeroImage1,
   newsHouseImage1,
   newsHouseImage2,
   newsHouseImage3,
   newsHouseImage4,
 } from "assets/images/jpg";
+import { Button, Input } from "components";
 
 const ServicesView = () => {
   useEffect(() => {
@@ -835,6 +837,62 @@ const ServicesView = () => {
                       );
                     })}
                 </ul>
+              </div>
+
+              <div className="container">
+                <section className="services__contact">
+                  <div className="services__box">
+                    <h3 className="services__box-title">Any questions?</h3>
+                    <p className="services__box-text">
+                      Feel free to reach out to us by completing the form below.
+                    </p>
+                    <hr className="services__box-horizontal-rule" />
+                    <form className="services__form">
+                      <Input
+                        required
+                        type="text"
+                        placeholder="Your name"
+                        className="services__form-field"
+                      />
+                      <Input
+                        required
+                        type="email"
+                        placeholder="Your Email Address"
+                        className="services__form-field"
+                      />
+                      <Input
+                        required
+                        type="number"
+                        placeholder="Contact phone"
+                        className="services__form-field"
+                      />
+                      <select required className="services__form-field">
+                        <option
+                          value="project scope"
+                          className="services__form-select-option"
+                        >
+                          Project scope
+                        </option>
+                      </select>
+                      <textarea
+                        required
+                        className="services__form-texterea"
+                        placeholder="Describe your request"
+                      ></textarea>
+                      <Button type="submit" className="services__form-submit">
+                        Submit your request
+                      </Button>
+                    </form>
+                  </div>
+                  <div className="services__box">
+                    <img
+                      height={630}
+                      alt="contact"
+                      src={ContactImage}
+                      className="services__contact-image"
+                    />
+                  </div>
+                </section>
               </div>
             </section>
           );
