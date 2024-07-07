@@ -9,6 +9,7 @@ const Contact = lazy(() => import("pages/Contact"));
 const NewsView = lazy(() => import("pages/NewsView"));
 const Services = lazy(() => import("pages/Services"));
 const Portfolio = lazy(() => import("pages/Portfolio"));
+const ServicesView = lazy(() => import("pages/ServicesView"));
 
 const routes = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const routes = createBrowserRouter([
       {
         element: <Services />,
         path: "/pages/services",
+      },
+      {
+        element: <ServicesView />,
+        path: "/pages/services/:id",
       },
       {
         element: <Portfolio />,
