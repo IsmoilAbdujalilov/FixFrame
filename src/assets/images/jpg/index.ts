@@ -1,4 +1,5 @@
 import AboutImage from "./about.jpg";
+import LeadingImage from "./leading.jpg";
 import ContactImage from "./contact.jpg";
 import HomeHeroImage from "./home-hero-image.jpg";
 import { HeroImage1, HeroImage2, HeroImage3, HeroImage4 } from "./hero";
@@ -51,6 +52,7 @@ export {
   NewsImage3,
   NewsImage4,
   NewsImage5,
+  LeadingImage,
   ContactImage,
   HomeHeroImage,
   OurAboutImage1,
