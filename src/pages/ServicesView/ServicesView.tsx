@@ -1,5 +1,6 @@
 import "./style.scss";
 import { useEffect } from "react";
+import { Button, Input } from "components";
 import { useParams } from "react-router-dom";
 import {
   ContactImage,
@@ -9,7 +10,6 @@ import {
   newsHouseImage3,
   newsHouseImage4,
 } from "assets/images/jpg";
-import { Button, Input } from "components";
 
 const ServicesView = () => {
   useEffect(() => {
