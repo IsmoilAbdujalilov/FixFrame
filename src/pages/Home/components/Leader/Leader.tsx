@@ -24,13 +24,12 @@ const Leader = () => {
               slidesPerView: 3,
             },
 
-            400: {
+            600: {
               slidesPerView: 2,
             },
 
-            350: {
+            320: {
               slidesPerView: 1,
-              spaceBetween: 0,
             },
           }}
           slidesPerView={5}
