@@ -840,56 +840,59 @@ const ServicesView = () => {
               </div>
 
               <div className="container">
-                <section className="services__contact">
-                  <div className="services__box">
-                    <h3 className="services__box-title">Any questions?</h3>
-                    <p className="services__box-text">
+                <section className="services-view__contact">
+                  <div className="services-view__box">
+                    <h3 className="services-view__box-title">Any questions?</h3>
+                    <p className="services-view__box-text">
                       Feel free to reach out to us by completing the form below.
                     </p>
-                    <hr className="services__box-horizontal-rule" />
-                    <form className="services__form">
+                    <hr className="services-view__box-horizontal-rule" />
+                    <form className="services-view__form">
                       <Input
                         required
                         type="text"
                         placeholder="Your name"
-                        className="services__form-field"
+                        className="services-view__form-field"
                       />
                       <Input
                         required
                         type="email"
                         placeholder="Your Email Address"
-                        className="services__form-field"
+                        className="services-view__form-field"
                       />
                       <Input
                         required
                         type="number"
                         placeholder="Contact phone"
-                        className="services__form-field"
+                        className="services-view__form-field"
                       />
-                      <select required className="services__form-field">
+                      <select required className="services-view__form-field">
                         <option
                           value="project scope"
-                          className="services__form-select-option"
+                          className="services-view__form-select-option"
                         >
                           Project scope
                         </option>
                       </select>
                       <textarea
                         required
-                        className="services__form-texterea"
+                        className="services-view__form-texterea"
                         placeholder="Describe your request"
                       ></textarea>
-                      <Button type="submit" className="services__form-submit">
+                      <Button
+                        type="submit"
+                        className="services-view__form-submit"
+                      >
                         Submit your request
                       </Button>
                     </form>
                   </div>
-                  <div className="services__box">
+                  <div className="services-view__box">
                     <img
                       height={630}
                       alt="contact"
                       src={ContactImage}
-                      className="services__contact-image"
+                      className="services-view__contact-image"
                     />
                   </div>
                 </section>
