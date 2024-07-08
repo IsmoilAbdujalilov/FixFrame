@@ -8,6 +8,7 @@ import {
   Leading,
   Mission,
   OurAbout,
+  Experience,
 } from "./components";
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
       <Slider />
       <Mission />
       <Result />
+      <Experience />
       <Leader />
     </>
   );

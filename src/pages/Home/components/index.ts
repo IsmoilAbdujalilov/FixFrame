@@ -6,5 +6,16 @@ import Slider from "./Slider";
 import Mission from "./Misson";
 import Leading from "./Leading";
 import OurAbout from "./OurAbout";
+import Experience from "./Experience";
 
-export { About, Slider, Mission, Result, Leading, Leader, Hero, OurAbout };
+export {
+  Hero,
+  About,
+  Slider,
+  Leader,
+  Result,
+  Mission,
+  Leading,
+  OurAbout,
+  Experience,
+};
