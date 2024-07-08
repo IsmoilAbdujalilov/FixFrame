@@ -39,19 +39,19 @@ const ServicesView = () => {
 
   type listDataTypes = {
     id: number;
-    title: string;
     data: dataTypes[];
+    title: string | undefined | null;
   };
 
-  // type newDataTypes = {
-  //   id: number;
-  //   text: string;
-  //   listData: listDataTypes[];
-  //   title: string;
-  //   images: imageTypes[];
-  // };
+  type newDataTypes = {
+    id: number;
+    text: string;
+    listData: listDataTypes[];
+    title: string;
+    images: imageTypes[];
+  };
 
-  const newsData = [
+  const newsData: newDataTypes[] = [
     {
       id: 4,
       title: "Property winterization",
@@ -771,14 +771,12 @@ const ServicesView = () => {
 
   const { id } = useParams();
 
-  const findData = newsData.filter((el) => el.id === Number(id));
-
-  console.log(findData);
+  const findData = newsData.filter((el: newDataTypes) => el.id === Number(id));
 
   return (
     <>
       {findData.length > 0 &&
-        findData.map((el) => {
+        findData.map((el: newDataTypes) => {
           return (
             <section className="services-view" key={el.id}>
               <h1 className="visually-hidden">{el.title}</h1>
