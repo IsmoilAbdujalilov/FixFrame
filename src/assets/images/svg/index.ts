@@ -1,4 +1,5 @@
 import fixFrameLogo from "./fix-frame-logo.svg";
+import { MissionIcon1, MissionIcon2 } from "./missions";
 import { Media1, Media2, Media3, Media4 } from "./medias";
 import { CarouselIcon1, CarouselIcon2 } from "./carousel";
 import {
@@ -23,6 +24,8 @@ export {
   Media3,
   Media4,
   fixFrameLogo,
+  MissionIcon1,
+  MissionIcon2,
   CarouselIcon1,
   CarouselIcon2,
   siteMediasIcon1,

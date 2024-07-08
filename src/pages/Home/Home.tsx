@@ -1,4 +1,4 @@
-import { About, Hero, Leading, Leader, OurAbout } from "./components";
+import { About, Hero, Leading, Leader, OurAbout, Mission } from "./components";
 
 const Home = () => {
   return (
@@ -7,6 +7,7 @@ const Home = () => {
       <About />
       <OurAbout />
       <Leading />
+      <Mission />
       <Leader />
     </>
   );
