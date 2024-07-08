@@ -3,6 +3,7 @@ import {
   About,
   Result,
   Leader,
+  Slider,
   Leading,
   Mission,
   OurAbout,
@@ -15,6 +16,7 @@ const Home = () => {
       <About />
       <OurAbout />
       <Leading />
+      <Slider />
       <Mission />
       <Result />
       <Leader />
