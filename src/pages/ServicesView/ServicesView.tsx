@@ -35,6 +35,7 @@ const ServicesView = () => {
 
   type dataTypes = {
     text: string;
+    id: string | number;
   };
 
   type listDataTypes = {
@@ -84,6 +85,7 @@ const ServicesView = () => {
           title: "",
           data: [
             {
+              id: 1,
               text: `
               Although winters are enchanting, the frigid conditions can significantly impact your
               home. In states with harsh cold climates, vacant properties are particularly susceptible
@@ -91,6 +93,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
               Property winterization safeguards your home from the harsh winter winds. Overlooking
               even a single component, such as the radiant heat system or plumbing fixtures, can
@@ -99,6 +102,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 3,
               text: `
               Our property winterization services prepare your home for winter. We handle everything
               from maintaining heating systems to ensuring proper insulation, checking for potential
@@ -108,6 +112,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 4,
               text: `
               Winterization is the process of preparing a home for the harsh conditions of winter,
               typically done in the fall before snow and extreme cold arrive. It protects against
@@ -116,6 +121,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 5,
               text: `
               Water damage from burst pipes in cold weather can be devastating. A ruptured pipe will
               release water until someone shuts it off, potentially flooding a house and causing
@@ -124,6 +130,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 6,
               text: `
               All exposed water pipes in cold areas like attics, garages, and crawlspaces should be
               insulated with foam or fiberglass insulation available at most hardware stores.
@@ -132,6 +139,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 7,
               text: `
               The water supply for exterior pipes should be shut off from inside the house and
               drained. Sprinkler systems are particularly vulnerable to cracking from cold-weather
@@ -140,6 +148,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 8,
               text: `
                Homeowners should remember that much of the plumbing system runs through
                significantly colder areas of the house. Since it's impossible to monitor the
@@ -184,6 +193,7 @@ const ServicesView = () => {
           title: "Our Expertise:",
           data: [
             {
+              id: 1,
               text: `
               Securing Services: Ensuring the safety and security of your property is our top 
               priority. Our comprehensive Securing services nclude: Property Lockdown: We secure all 
@@ -192,6 +202,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
               Surveillance Installation: We install state-of-the-art surveillance systems that
               provide 24/7 monitoring. Our cameras capture high-definition footage, which can be
@@ -199,6 +210,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 3,
               text: `
               Alarm Systems: Our alarm systems are designed to detect any unauthorized entry or
               suspicious activity. With immediate alerts, you can respond quickly to any potential
@@ -206,6 +218,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 4,
               text: `
               Security Inspections: Regular security inspections are conducted to identify and
               address any vulnerabilities. We provide detailed reports and recommendations for
@@ -213,12 +226,14 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 5,
               text: `
               Emergency Response: In the event of a security breach or emergency, our team is
               available to respond promptly and take necessary actions to mitigate any risks.
               `,
             },
             {
+              id: 6,
               text: `
               Boarding Services: Our Boarding services are tailored to provide efficient and
               effective property management solutions. We ensure your property is well-maintained
@@ -226,6 +241,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 7,
               text: `
               Tenant Placement: We carefully screen potential tenants to ensure they meet your
               criteria, including background checks and reference verification. Our goal is to find
@@ -233,6 +249,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 8,
               text: `
                Move-In/Move-Out Assistance: We handle all aspects of the move-in and move-out
                process, including coordinating schedules, assisting with logistics, and conducting
@@ -240,6 +257,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 9,
               text: `
                Property Preparation: Our team prepares your property for new tenants by performing
                thorough cleaning, minor repairs, and maintenance tasks. We ensure the property is in
@@ -247,6 +265,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 10,
               text: `
                Ongoing Support: We provide ongoing support and maintenance services, including
                routine inspections, landscaping, and addressing any tenant concerns or maintenance
@@ -254,6 +273,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 11,
               text: `
                Lease Management: We manage all lease-related tasks, including drafting lease
                agreements, handling renewals, and managing any necessary legal documentation. Our
@@ -261,6 +281,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 12,
               text: `
                With our Securing and Boarding services, you can have peace of mind knowing that your
                property is in capable hands. We are committed to providing top-notch service and
@@ -303,6 +324,7 @@ const ServicesView = () => {
           title: "Our Expertise:",
           data: [
             {
+              id: 1,
               text: `
               Structural Repairs: We address and repair any structural damage to your property,
               ensuring it is safe and stable. Our team is experienced in handling damages caused by
@@ -310,6 +332,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
               Water Damage Restoration: Our water damage restoration services include water
               extraction, drying, dehumidification, and mold remediation. We work quickly to
@@ -317,6 +340,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 3,
               text: `
               Fire and Smoke Damage Restoration: We provide comprehensive fire and smoke damage
               restoration services, including soot and smoke removal, odor control, and property
@@ -324,6 +348,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 4,
               text: `
               Electrical and Plumbing Repairs: Our skilled technicians handle all types of
               electrical and plumbing repairs, from fixing faulty wiring and leaky pipes to
@@ -332,6 +357,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 5,
               text: `
               Interior and Exterior Repairs: We offer a wide range of interior and exterior repair
               services, including drywall repair, painting, roofing, siding, and window replacement.
@@ -346,6 +372,7 @@ const ServicesView = () => {
           title: "Why Choose FixFrame?",
           data: [
             {
+              id: 1,
               text: `
               Experienced Professionals: Our team consists of highly trained and experienced
               professionals who are experts in their respective fields. We are committed to
@@ -353,6 +380,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
               Comprehensive Services: We offer a full range of repair and damage restoration
               services, ensuring that all your needs are met under one roof. From minor repairs to
@@ -360,6 +388,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 3,
               text: `
               Prompt and Reliable: We understand the urgency of repair and restoration work. Our
               team responds quickly to your needs and works efficiently to complete the job on time
@@ -367,6 +396,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 4,
               text: `
               Customer Satisfaction: Your satisfaction is our top priority. We work closely with
               you throughout the repair process, keeping you informed and addressing any concerns
@@ -380,6 +410,7 @@ const ServicesView = () => {
           title: "Quality and Satisfaction:",
           data: [
             {
+              id: 1,
               text: `
               At FixFrame, quality and satisfaction are the cornerstones of our service. We use the
               highest quality materials and follow industry best practices to ensure that all
@@ -424,6 +455,7 @@ const ServicesView = () => {
           title: "Initial Consultation:",
           data: [
             {
+              id: 1,
               text: `
               Assessment: We start with an initial consultation to understand your specific cleaning
               needs and preferences. Our team will discuss the areas you want to focus on, any
@@ -431,6 +463,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
               Customized Plan: Based on the consultation, we create a customized cleaning plan
               tailored to your home and schedule. We ensure that all your requirements are met.
@@ -443,6 +476,7 @@ const ServicesView = () => {
           title: "Scheduling:",
           data: [
             {
+              id: 1,
               text: `
               Flexible Appointments: We offer flexible scheduling options to fit your lifestyle.
               Whether you need weekly, bi-weekly, monthly, or one-time cleaning, we arrange
@@ -450,6 +484,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
                Confirmation: Prior to each cleaning session, we send a confirmation to remind you
                of the scheduled appointment and any special instructions you may have.
@@ -462,12 +497,14 @@ const ServicesView = () => {
           title: "Arrival and Setup:",
           data: [
             {
+              id: 1,
               text: `
               Professional Team: Our team of professional cleaners arrives on time, in uniform,
               and fully equipped with all necessary cleaning supplies and equipment. Briefing:
             `,
             },
             {
+              id: 2,
               text: `
               We conduct a quick briefing to review the cleaning plan and address any last-minute
               instructions or areas of concern.
@@ -480,12 +517,14 @@ const ServicesView = () => {
           title: "Quality Check:",
           data: [
             {
+              id: 1,
               text: `
                Inspection: After cleaning, our team conducts a thorough inspection to ensure all
                tasks have been completed to our high standards. Feedback:
             `,
             },
             {
+              id: 2,
               text: `
               We encourage you to provide feedback on the cleaning service to ensure your
               satisfaction and address any areas for improvement.
@@ -498,12 +537,14 @@ const ServicesView = () => {
           title: "Post-Cleaning:",
           data: [
             {
+              id: 1,
               text: `
                Final Touches: We make final touches to ensure everything is in its place and your 
                home looks pristine. Secure Exit:
             `,
             },
             {
+              id: 2,
               text: `
               Our team ensures that your home is secure upon departure, locking doors and setting alarms as needed.
             `,
@@ -515,6 +556,7 @@ const ServicesView = () => {
           title: "Follow-Up:",
           data: [
             {
+              id: 1,
               text: `
                Customer Satisfaction: We follow up with you to ensure you are completely satisfied
                with our services. Your feedback is valuable in helping us maintain the highest
@@ -559,6 +601,7 @@ const ServicesView = () => {
           title: "Our Expertise:",
           data: [
             {
+              id: 1,
               text: `
               At FixFrame Inc., we've perfected the craft of mold remediation. Our team of expert 
               professionals blends state- of - the - art technology with extensive experience to 
@@ -574,11 +617,13 @@ const ServicesView = () => {
           title: "Why Choose FixFrame?",
           data: [
             {
+              id: 1,
               text: `
               Qualified Experts: Our technicians hold certifications from top industry organizations, ensuring that your mold issue receives the utmost professional attention.
             `,
             },
             {
+              id: 2,
               text: `
                 Cutting- edge Technology: We employ advanced equipment and techniques for mold 
                 inspection, elimination, and prevention, ensuring effective and long - lasting
@@ -586,6 +631,7 @@ const ServicesView = () => {
               `,
             },
             {
+              id: 3,
               text: `
                 Tailored Approaches: Each mold situation is distinct.We customize our solutions 
                 to fit your exact requirements, addressing the underlying cause rather than just 
@@ -599,18 +645,21 @@ const ServicesView = () => {
           title: "Our Services:",
           data: [
             {
+              id: 1,
               text: `
               Mold Assessment: Our specialists perform thorough assessments to determine the type 
               and scope of mold presence in your premises.
             `,
             },
             {
+              id: 2,
               text: `
               Mold Eradication: Employing state-of-the-art methods, we securely and efficiently
               eliminate mold from your property, preventing its recurrence.
             `,
             },
             {
+              id: 3,
               text: `
               Preventive Actions: We enact preventive measures to deter mold reappearance,
               safeguarding your residence and well-being for the future.
@@ -623,6 +672,7 @@ const ServicesView = () => {
           title: "Health and Safety:",
           data: [
             {
+              id: 1,
               text: `
                At FixFrame, your health is our foremost concern.Mold can lead to various health 
                concerns, such as allergies and respiratory issues.We adhere to strict safety 
@@ -637,6 +687,7 @@ const ServicesView = () => {
           title: "Service Areas:",
           data: [
             {
+              id: 1,
               text: `
                FixFrame proudly serves homeowners and businesses throughout Chicago and the
                surrounding regions. We're only a phone call away, prepared to promptly address
@@ -650,6 +701,7 @@ const ServicesView = () => {
           title: "Contact Us:",
           data: [
             {
+              id: 1,
               text: `
                Don't allow mold to jeopardize your home or health any further. Reach out to Ninja 
                Group Inc today to arrange an inspection or discuss your mold removal requirements.
@@ -657,6 +709,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
                If you think only untidy homes are susceptible to mold, you might be mistaken.
                Whether it’s your residence or workplace, mold can thrive anywhere. What’s more
@@ -664,22 +717,26 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 3,
               text: `
               Unchecked mold growth can pose a health hazard. Left untreated, mold can rapidly
               spread throughout your property, causing structural damage and impacting its value.
             `,
             },
             {
+              id: 4,
               text: `
               The longer mold is allowed to flourish, the more harm it can cause.
               `,
             },
             {
+              id: 5,
               text: `
               To prevent serious health risks, mold growth must be addressed promptly.
               `,
             },
             {
+              id: 6,
               text: `
               We offer mold inspection and remediation services to ensure your home is safe for you
               and your family. Our mold inspectors meticulously examine your indoor spaces. We
@@ -720,6 +777,7 @@ const ServicesView = () => {
           title: "Our Expertise:",
           data: [
             {
+              id: 1,
               text: `
               At FixFrame Inc., we've perfected the craft of mold remediation. Our team of expert
               professionals blends state-of-the-art technology with extensive experience to provide
@@ -735,6 +793,7 @@ const ServicesView = () => {
           title: "Why Choose FixFrame?",
           data: [
             {
+              id: 1,
               text: `
             Experienced Team:Our team comprises certified inspectors and skilled lawn care
             specialists who bring extensive knowledge and expertise to every project. We stay
@@ -742,12 +801,14 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 2,
               text: `
             Comprehensive Services: We offer a wide range of services tailored to meet the unique
             needs of homeowners and property managers.
             `,
             },
             {
+              id: 3,
               text: `
               Quality Assurance: We prioritize quality in every aspect of our work. Our inspection
               reports are meticulous and comprehensive, providing you with a clear understanding of
@@ -756,6 +817,7 @@ const ServicesView = () => {
             `,
             },
             {
+              id: 4,
               text: `
               Customer-Centric Approach: Your satisfaction is our top priority. We work closely with
               you to understand your goals and preferences, tailoring our services to meet your

@@ -132,13 +132,14 @@ $contact-title-color: #ffffff;
 
   &-image::after {
     content: "";
-    width: 90px;
+    width: 100%;
     right: 0;
+    bottom: 0;
     transform: rotate(180deg);
-    height: 100%;
+    height: 90px;
     position: absolute;
     background: linear-gradient(
-      90deg,
+      180deg,
       $contact-title-color 10%,
       rgba(255, 255, 255, 0) 100%
     );

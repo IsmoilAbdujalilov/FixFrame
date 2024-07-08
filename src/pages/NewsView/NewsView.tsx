@@ -580,13 +580,10 @@ const NewsView = () => {
 
   const findData = newsData.filter((el) => el.id === Number(id));
 
-  console.log(findData);
-
   return (
     <>
       {findData.length > 0 &&
         findData.map((el: newDataTypes) => {
-          console.log(el);
           return (
             <section className="news-view" key={el.id}>
               <h1 className="visually-hidden">{el.title}</h1>
