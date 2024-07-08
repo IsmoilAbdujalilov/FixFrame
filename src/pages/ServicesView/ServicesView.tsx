@@ -43,13 +43,13 @@ const ServicesView = () => {
     data: dataTypes[];
   };
 
-  type newDataTypes = {
-    id: number;
-    text: string;
-    listData: listDataTypes[];
-    title: string;
-    images: imageTypes[];
-  };
+  // type newDataTypes = {
+  //   id: number;
+  //   text: string;
+  //   listData: listDataTypes[];
+  //   title: string;
+  //   images: imageTypes[];
+  // };
 
   const newsData = [
     {
