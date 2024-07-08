@@ -1,5 +1,6 @@
-import { HeroImage1 } from "assets/images/jpg";
 import "./style.scss";
+import { useEffect } from "react";
+import { HeroImage1 } from "assets/images/jpg";
 import {
   ContactMediaIcon1,
   ContactMediaIcon2,
@@ -7,6 +8,13 @@ import {
 } from "assets/images/svg";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const backgroundColor = "rgba(0, 20, 96, 0.700)";
 
   const backgroundStyle = {

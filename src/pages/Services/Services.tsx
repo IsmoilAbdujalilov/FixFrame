@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
 import "./style.scss";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Button, Input } from "components";
 import {
   ContactImage,
   HeroImage4,
@@ -10,9 +12,15 @@ import {
   ServicesImage5,
   ServicesImage6,
 } from "assets/images/jpg";
-import { Button, Input } from "components";
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const backgroundColor = "rgba(0, 20, 96, 0.700)";
 
   const backgroundStyle = {

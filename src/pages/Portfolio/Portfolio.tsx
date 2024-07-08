@@ -1,4 +1,5 @@
 import "./style.scss";
+import { useEffect } from "react";
 import { Button } from "components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -12,6 +13,13 @@ import {
 } from "assets/images/svg";
 
 const Portfolio = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const backgroundColor = "rgba(0, 20, 96, 0.700)";
 
   const backgroundStyle = {

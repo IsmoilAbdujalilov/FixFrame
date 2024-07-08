@@ -1,10 +1,18 @@
 import "./style.scss";
+import { useEffect } from "react";
 import { Button } from "components";
 import { ErrorImage } from "assets/images/png";
 import { useNavigate } from "react-router-dom";
 
 const Error = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <section className="error">

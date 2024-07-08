@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Hero,
   About,
@@ -10,6 +11,13 @@ import {
 } from "./components";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <>
       <Hero />

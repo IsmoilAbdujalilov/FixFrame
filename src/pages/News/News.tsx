@@ -1,6 +1,6 @@
 import "./style.scss";
-import { useRef } from "react";
 import { Button } from "components";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -35,6 +35,13 @@ import {
 } from "assets/images/jpg";
 
 const News = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const navigate = useNavigate();
 
   type imageTypes = {
