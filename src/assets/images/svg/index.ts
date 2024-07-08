@@ -7,6 +7,7 @@ import {
   ContactMediaIcon2,
   ContactMediaIcon3,
 } from "./contact-medias";
+
 import {
   siteTopContactsIcon1,
   siteTopContactsIcon2,
@@ -17,12 +18,22 @@ import {
   siteMediasIcon2,
   siteMediasIcon3,
 } from "./site-medias";
+import {
+  ResultImage1,
+  ResultImage2,
+  ResultImage3,
+  ResultImage4,
+} from "./result";
 
 export {
   Media1,
   Media2,
   Media3,
   Media4,
+  ResultImage1,
+  ResultImage2,
+  ResultImage3,
+  ResultImage4,
   fixFrameLogo,
   MissionIcon1,
   MissionIcon2,
