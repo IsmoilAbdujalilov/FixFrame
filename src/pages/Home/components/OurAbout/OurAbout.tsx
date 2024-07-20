@@ -14,6 +14,7 @@ const OurAbout = () => {
             <img
               width={620}
               height={400}
+              loading="lazy"
               src={OurAboutImage1}
               alt="our about image"
               className="our-about__item-image"
@@ -47,6 +48,7 @@ const OurAbout = () => {
             <img
               width={620}
               height={400}
+              loading="lazy"
               src={OurAboutImage2}
               alt="our about image"
               className="our-about__item-image"
@@ -56,6 +58,7 @@ const OurAbout = () => {
             <img
               width={620}
               height={400}
+              loading="lazy"
               src={OurAboutImage3}
               alt="our about image"
               className="our-about__item-image"

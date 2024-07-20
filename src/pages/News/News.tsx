@@ -253,6 +253,7 @@ const News = () => {
                               <img
                                 height={520}
                                 src={el.image}
+                                loading="lazy"
                                 alt="news-image-5"
                                 className="news-carousel__item-image"
                               />
@@ -270,6 +271,7 @@ const News = () => {
                             alt="icon"
                             width={32}
                             height={32}
+                            loading="lazy"
                             src={CarouselIcon1}
                             className="news-buttons__btn-image"
                           />
@@ -283,6 +285,7 @@ const News = () => {
                             alt="icon"
                             width={32}
                             height={32}
+                            loading="lazy"
                             src={CarouselIcon2}
                             className="news-buttons__btn-image"
                           />
@@ -311,6 +314,7 @@ const News = () => {
                             width={32}
                             height={32}
                             src={Media1}
+                            loading="lazy"
                             alt="FixFrame instagram"
                             className="news-footer__media-image"
                           />
@@ -326,6 +330,7 @@ const News = () => {
                             width={32}
                             height={32}
                             src={Media2}
+                            loading="lazy"
                             alt="FixFrame facebook"
                             className="news-footer__media-image"
                           />
@@ -341,6 +346,7 @@ const News = () => {
                             width={32}
                             height={32}
                             src={Media3}
+                            loading="lazy"
                             alt="FixFrame twitter"
                             className="news-footer__media-image"
                           />

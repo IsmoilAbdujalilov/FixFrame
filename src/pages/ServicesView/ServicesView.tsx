@@ -863,6 +863,7 @@ const ServicesView = () => {
                           <img
                             height={410}
                             src={el.image}
+                            loading="lazy"
                             alt="contact-house-image-1"
                             className="services-view__house-image"
                           />
@@ -951,6 +952,7 @@ const ServicesView = () => {
                     <img
                       height={630}
                       alt="contact"
+                      loading="lazy"
                       src={ContactImage}
                       className="services-view__contact-image"
                     />

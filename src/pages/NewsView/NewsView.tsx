@@ -603,6 +603,7 @@ const NewsView = () => {
                           <img
                             height={410}
                             src={el.image}
+                            loading="lazy"
                             alt="contact-house-image-1"
                             className="news-view__house-image"
                           />

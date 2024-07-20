@@ -123,6 +123,7 @@ const Contact = () => {
                 <img
                   width={32}
                   height={32}
+                  loading="lazy"
                   src={ContactMediaIcon1}
                   alt="FixFrame instagram"
                   className="contact__blank-icon"
@@ -134,6 +135,7 @@ const Contact = () => {
                 <img
                   width={32}
                   height={32}
+                  loading="lazy"
                   src={ContactMediaIcon2}
                   alt="FixFrame facebook"
                   className="contact__blank-icon"
@@ -145,6 +147,7 @@ const Contact = () => {
                 <img
                   width={32}
                   height={32}
+                  loading="lazy"
                   src={ContactMediaIcon3}
                   alt="FixFrame telephone"
                   className="contact__blank-icon"

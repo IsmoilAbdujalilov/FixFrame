@@ -99,6 +99,7 @@ const Services = () => {
                   <img
                     width={400}
                     height={350}
+                    loading="lazy"
                     src={el.image}
                     className="services__card-image"
                     alt="Inspection Services and Lawn Mainten..."
@@ -307,6 +308,7 @@ const Services = () => {
             <img
               height={630}
               alt="contact"
+              loading="lazy"
               src={ContactImage}
               className="services__contact-image"
             />
